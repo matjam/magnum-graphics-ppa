@@ -7,6 +7,7 @@
 [submodule "upstream/magnum-extras"]
 	path = upstream/magnum-extras
 	url = https://github.com/mosra/magnum-extras
+	ignore = untracked
 [submodule "upstream/magnum-plugins"]
 	path = upstream/magnum-plugins
 	url = https://github.com/mosra/magnum-plugins
