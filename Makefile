@@ -1,5 +1,5 @@
-XENIAL_RELEASE="2018.04-1ppa2~ubuntu16.04"
-BIONIC_RELEASE="2018.04-1ppa2~ubuntu18.04"
+XENIAL_RELEASE="2018.04-1ppa5~ubuntu16.04"
+BIONIC_RELEASE="2018.04-1ppa5~ubuntu18.04"
 
 all: corrade magnum magnum-plugins magnum-integration magnum-extras magnum-examples
 
