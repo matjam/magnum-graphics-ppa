@@ -3,4 +3,6 @@ upstream/*.build
 upstream/*.buildinfo
 upstream/*.changes
 upstream/*.tar.xz
+upstream/*.ddeb
+upstream/*.deb
 sage
