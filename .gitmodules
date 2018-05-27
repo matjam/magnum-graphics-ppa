@@ -1,0 +1,18 @@
+[submodule "upstream/corrade"]
+	path = upstream/corrade
+	url = https://github.com/mosra/corrade
+[submodule "upstream/magnum"]
+	path = upstream/magnum
+	url = https://github.com/mosra/magnum
+[submodule "upstream/magnum-extras"]
+	path = upstream/magnum-extras
+	url = https://github.com/mosra/magnum-extras
+[submodule "upstream/magnum-plugins"]
+	path = upstream/magnum-plugins
+	url = https://github.com/mosra/magnum-plugins
+[submodule "upstream/magnum-integration"]
+	path = upstream/magnum-integration
+	url = https://github.com/mosra/magnum-integration
+[submodule "upstream/magnum-examples"]
+	path = upstream/magnum-examples
+	url = https://github.com/mosra/magnum-examples
