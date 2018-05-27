@@ -1,0 +1,6 @@
+upstream/*.dsc
+upstream/*.build
+upstream/*.buildinfo
+upstream/*.changes
+upstream/*.tar.xz
+sage
