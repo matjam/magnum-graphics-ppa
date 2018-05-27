@@ -1,7 +1,7 @@
-XENIAL_RELEASE="2018.04-0ubuntu0~16.04"
-BIONIC_RELEASE="2018.04-0ubuntu0~18.04"
+XENIAL_RELEASE="2018.04-1ppa2~ubuntu16.04"
+BIONIC_RELEASE="2018.04-1ppa2~ubuntu18.04"
 
-all: corrade
+all: corrade magnum magnum-plugins magnum-integration magnum-extras magnum-examples
 
 .PHONY: clean
 clean:
@@ -13,7 +13,7 @@ cp -r ubuntu/$@ upstream/$@/debian
 cd upstream/$@/debian && dch -v $1 -D $2 "PPA release of $1 for ubuntu $2"
 cd upstream/$@/debian && dch -r ""
 cat upstream/$@/debian/changelog | head
-cd upstream/$@/debian && debuild -S -sa
+cd upstream/$@/debian && debuild -S -sa -d
 endef
 
 .PHONY: corrade
@@ -21,12 +21,32 @@ corrade:
 	$(call dobuild,$(XENIAL_RELEASE),"xenial")
 	$(call dobuild,$(BIONIC_RELEASE),"bionic")
 
-.PHONY: magnum-graphics
-magnum: 
+.PHONY: magnum
+magnum-graphics: 
 	$(call dobuild,$(XENIAL_RELEASE),"xenial")
 	$(call dobuild,$(BIONIC_RELEASE),"bionic")
 
-.PHONY: upload
-upload:
-	cd upstream && dput ppa:chrome/magnum-graphics corrade_$(XENIAL_RELEASE)_source.changes
-	cd upstream && dput ppa:chrome/magnum-graphics corrade_$(BIONIC_RELEASE)_source.changes
+.PHONY: magnum-plugins
+magnum-graphics-plugins:
+	$(call dobuild,$(XENIAL_RELEASE),"xenial")
+	$(call dobuild,$(BIONIC_RELEASE),"bionic")
+
+.PHONY: magnum-integration
+magnum-graphics-integration:
+	$(call dobuild,$(XENIAL_RELEASE),"xenial")
+	$(call dobuild,$(BIONIC_RELEASE),"bionic")
+
+.PHONY: magnum-extras
+magnum-graphics-extras:
+	$(call dobuild,$(XENIAL_RELEASE),"xenial")
+	$(call dobuild,$(BIONIC_RELEASE),"bionic")
+
+.PHONY: magnum-examples
+magnum-graphics-examples:
+	$(call dobuild,$(XENIAL_RELEASE),"xenial")
+	$(call dobuild,$(BIONIC_RELEASE),"bionic")
+
+# .PHONY: upload
+# upload:
+# 	cd upstream && dput ppa:chrome/magnum-graphics corrade_$(XENIAL_RELEASE)_source.changes
+# 	cd upstream && dput ppa:chrome/magnum-graphics corrade_$(BIONIC_RELEASE)_source.changes
