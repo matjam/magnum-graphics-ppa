@@ -22,27 +22,27 @@ corrade:
 	$(call dobuild,$(BIONIC_RELEASE),"bionic")
 
 .PHONY: magnum
-magnum-graphics: 
+magnum: 
 	$(call dobuild,$(XENIAL_RELEASE),"xenial")
 	$(call dobuild,$(BIONIC_RELEASE),"bionic")
 
 .PHONY: magnum-plugins
-magnum-graphics-plugins:
+magnum-plugins:
 	$(call dobuild,$(XENIAL_RELEASE),"xenial")
 	$(call dobuild,$(BIONIC_RELEASE),"bionic")
 
 .PHONY: magnum-integration
-magnum-graphics-integration:
+magnum-integration:
 	$(call dobuild,$(XENIAL_RELEASE),"xenial")
 	$(call dobuild,$(BIONIC_RELEASE),"bionic")
 
 .PHONY: magnum-extras
-magnum-graphics-extras:
+magnum-extras:
 	$(call dobuild,$(XENIAL_RELEASE),"xenial")
 	$(call dobuild,$(BIONIC_RELEASE),"bionic")
 
 .PHONY: magnum-examples
-magnum-graphics-examples:
+magnum-examples:
 	$(call dobuild,$(XENIAL_RELEASE),"xenial")
 	$(call dobuild,$(BIONIC_RELEASE),"bionic")
 
